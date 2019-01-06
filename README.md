@@ -1,4 +1,4 @@
-Sample Resume Website, using HP as the filler text
+Sample Resume Website, using Harry Potter as filler text
 
 Practicing:
 + HTML/CSS Formatting
