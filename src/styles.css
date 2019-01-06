@@ -1,0 +1,39 @@
+.App {
+  /* //font-family: sans-serif; */
+  font-family: "IM Fell English SC", serif;
+  text-align: left;
+  background-color: lightblue;
+}
+
+li {
+  list-style-type: none;
+}
+
+table,
+th,
+td {
+  table-layout: fixed;
+  border: 1px solid black;
+  text-align: center;
+  width: 300px;
+}
+
+.item:hover h2.new-label:after {
+  text-decoration: line-through;
+  color: green;
+  content: "Potter Stinks";
+}
+
+td {
+  padding-right: 10px;
+}
+
+td:hover {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.selected {
+  font-weight: bold;
+  color: red;
+}
