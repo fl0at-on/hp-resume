@@ -38,6 +38,7 @@ const Projects = ({ match }) => {
       </ul>
       <hr />
 
+      <Route exact path={match.url + "/"} render={props => <div />} />
       <Route
         path={match.url + "/1"}
         render={props => <div>Found the Philosopher's Stone.</div>}
