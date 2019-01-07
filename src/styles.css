@@ -64,6 +64,83 @@ html body {
   }
 }
 
+.focus-in-contract {
+  -webkit-animation: focus-in-contract 4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    2s both;
+  animation: focus-in-contract 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+}
+
+/**
+ * ----------------------------------------
+ * animation focus-in-contract
+ * ----------------------------------------
+ */
+@-webkit-keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.blur-out-expand {
+  -webkit-animation: blur-out-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: blur-out-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+}
+
+/**
+ * ----------------------------------------
+ * animation blur-out-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes blur-out-expand {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+    height: 0px;
+    visibility: hidden;
+  }
+}
+@keyframes blur-out-expand {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+    height: 0px;
+    visibility: hidden;
+    top: -10px;
+  }
+}
+
 /* If the screen size is 601px wide or more,
  set the font-size of <div> to 25px */
 @media screen and (min-width: 601px) {

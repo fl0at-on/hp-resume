@@ -127,10 +127,14 @@ const Resume = ({ match }) => {
         </NavLink>
         <h2>Harry Potter</h2>
 
-        <p style={{ textDecoration: "line-through", margin: "0px" }}>
-          4 Privet Drive Little Whinging, Surrey, UK
-        </p>
-        <p style={{ margin: "0px" }}>12 Grimmauld Place, London, UK</p>
+        <div>
+          <p className="blur-out-expand" style={{ margin: "0px" }}>
+            4 Privet Drive Little Whinging, Surrey, UK
+          </p>
+          <p className="focus-in-contract" style={{ margin: "0px" }}>
+            12 Grimmauld Place, London, UK
+          </p>
+        </div>
       </div>
       <hr />
 
