@@ -18,53 +18,33 @@ import Error from "./Error.jsx";
 import Friend from "./Friend.jsx";
 import AllFriends from "./AllFriends.jsx";
 
-const state = {
-  users: [
-    {
-      id: 1,
-      name: "Terry"
-    },
-    {
-      id: 2,
-      name: "Larry"
-    },
-    {
-      id: 3,
-      name: "Gary"
-    },
-    {
-      id: 4,
-      name: "Mary"
-    }
-  ]
+window.onscroll = function() {
+  scrollFunction();
 };
-// const About = () => (
-//   <ul>
-//     <li>Guten tag from About</li>
-//   </ul>
-// );
-// const Users = ({ match, location, history }) => {
-//   const arrIndex = Number(match.params.id) - 1;
-//   if (arrIndex < state.users.length) {
-//     return (
-//       <ul>
-//         <li>
-//           {state.users[arrIndex].id}: {state.users[arrIndex].name}
-//         </li>
-//       </ul>
-//     );
-//   } else {
-//     return (
-//       <ul>
-//         <li>User not found.</li>
-//       </ul>
-//     );
-//   }
-// };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("scrollBtn").style.display = "block";
+  } else {
+    document.getElementById("scrollBtn").style.display = "none";
+  }
+}
+
+const scrollUp = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
 
 const App = () => (
   <BrowserRouter>
     <div className="App">
+      <img
+        id="scrollBtn"
+        className="scroll-btn"
+        onClick={scrollUp}
+        src="https://uploads.codesandbox.io/uploads/user/e8eb3050-f94b-4a71-b39f-5fa11a5ee09c/IL55-up-arrow.svg"
+      />
+
       <NavBar />
       <hr />
       <Switch>
@@ -75,6 +55,8 @@ const App = () => (
         <Route path="/contact" component={Contact} />
         <Route component={Error} />
       </Switch>
+      <hr />
+      <footer style={{ textAlign: "center" }}>Gryffindor4Lyf</footer>
     </div>
   </BrowserRouter>
 );
